@@ -1,0 +1,9 @@
+{
+  "authors": ["Justin Noah <justinnoah@gmail.com>"],
+  "name": "reste",
+  "version": "0.1",
+  "paths": [".", "./src"],
+  "repository": "https://github.com/justinnoah/reste",
+  "entrypoint": "src/reste",
+  "dependencies": {}
+}
