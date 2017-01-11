@@ -5,5 +5,10 @@
   "paths": [".", "./src"],
   "repository": "https://github.com/justinnoah/reste",
   "entrypoint": "src/reste",
-  "dependencies": {}
+  "dependencies": {},
+  "dev-dependencies": {
+    "http": {
+      "url": "https://github.com/monte-language/mt-http.git"
+    }
+  }
 }
