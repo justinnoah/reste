@@ -1,6 +1,6 @@
 import "lib/enum" =~ [=> makeEnum]
 import "unittest" =~ [=> unittest]
-# exports (makeRESTApp, GET, POST, PUT, DELETE)
+# exports (makeApp, GET, POST, PUT, DELETE)
 exports (Actions)
 
 def [Actions :DeepFrozen,
@@ -11,12 +11,12 @@ def [Actions :DeepFrozen,
         ["GET","POST", "PUT", "DELETE"]
     )
 
-def makeRESTApp() as DeepFrozen:
-    "Create a REST App object to manage/handle REST routing"
+def makeApp() as DeepFrozen:
+    "Create an App object to manage routing"
     # route to method map
     var routes := [].asMap().diverge()
 
-    return object RESTApp:
+    return object App:
         to getRoutes():
             return routes
 
@@ -30,11 +30,11 @@ def makeRESTApp() as DeepFrozen:
             return routes[url].getKeys()
 
 
-def testRESTApp(assert):
-    var app := makeRESTApp()
+def testApp(assert):
+    var app := makeApp()
     app.addRoute("/", [GET], fn { traceln("index reached")})
     assert.equal(app.methodsFor("/"), [GET])
 
 unittest([
-    testRESTApp,
+    testApp,
 ])

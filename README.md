@@ -1,3 +1,3 @@
 # RESTe
 
-A simple REST library written in Monte
+A simple routing library written in Monte
