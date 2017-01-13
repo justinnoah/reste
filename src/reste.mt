@@ -8,7 +8,7 @@ def [Actions :DeepFrozen,
     POST :DeepFrozen,
     PUT :DeepFrozen,
     DELETE :DeepFrozen] := makeEnum(
-        ["get","post", "put", "delete"]
+        ["GET","POST", "PUT", "DELETE"]
     )
 
 def makeRESTApp() as DeepFrozen:
